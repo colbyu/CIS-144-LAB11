@@ -14,8 +14,8 @@ public class SimpleGui extends JFrame implements ActionListener
     JCheckBox check1;
     SimpleGui() 
         {
-        l1 = new JLabel(" Current Salary");
-        l2 = new JLabel(" Percent Rate");
+        l1 = new JLabel(" Current Salary (numbers only, no symbols or commas)");
+        l2 = new JLabel(" Percent Rate (as a decimal value)");
         l3 = new JLabel(" New Salary");
         l4 = new JLabel("  ");
         b1 = new JButton("COMPUTE");
@@ -24,15 +24,15 @@ public class SimpleGui extends JFrame implements ActionListener
         t2 = new JTextField(10);
         t3 = new JTextField(10);
         check1 = new JCheckBox("Bonus Pay");
-        check1.setSelected(false);
+        check1.setSelected(true);
         add(l1);
         add(t1);
         add(l2);
         add(t2);
         add(l3);
         add(t3);
-        add(check1); //add to row 4
-        add(l4);     //add to row 4
+        add(check1);
+        add(l4);     
         add(b1);
         add(b2);
         b1.addActionListener(this);
@@ -50,7 +50,7 @@ public class SimpleGui extends JFrame implements ActionListener
             {
             a = Float.parseFloat(t1.getText());
             b = Float.parseFloat(t2.getText());
-            c = a*b+a;
+            c = (a*b)+a;
             t3.setText(String.valueOf(c));
             if (check1.isSelected());
                 {
