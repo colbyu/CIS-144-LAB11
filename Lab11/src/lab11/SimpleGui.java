@@ -1,8 +1,15 @@
 package lab11;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+//Colby Underhill
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import java.text.DecimalFormat;
 //Colby Underhill, Lab 11
 
 public class SimpleGui extends JFrame implements ActionListener 
@@ -59,10 +66,4 @@ public class SimpleGui extends JFrame implements ActionListener
                 }
             }
         }
-    public static void main(String args[]) 
-        {
-        SimpleGui a = new SimpleGui();
-        a.setVisible(true);
-        a.setLocation(200, 200);
-        }
-    }
+}
